@@ -66,7 +66,8 @@ struct IconView: View {
             Image(iconName)
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(16)
+            // Radius = width × (2/9) results in the standard iOS app icon shape!
+                .cornerRadius(70 * (2/9))
                 .frame(width: 70, height: 70)
             
             Text(iconName)
